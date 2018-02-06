@@ -1,7 +1,6 @@
 FROM alpine:latest
 
-RUN apk --update add python git && \
-    apk add lftp && \
+RUN apk --update add python git lftp && \
     rm -rf /var/cache/apk/*
 COPY /webhooks.py /
 COPY /docker-entry.sh  /
