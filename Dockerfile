@@ -3,8 +3,6 @@ FROM alpine:latest
 RUN apk --update add python git lftp && \
     rm -rf /var/cache/apk/*
 
-VOLUME /mnt /config
-
 COPY /webhooks.py /
 COPY /docker-entry.sh  /
 
